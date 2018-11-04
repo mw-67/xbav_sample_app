@@ -1,0 +1,12 @@
+<h2><%= edit_heading(@instance) %></h2>
+<% if @instance.errors.present? %>
+<div class="errors">
+Errors:
+<ul>
+  <% @instance.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+</ul>
+</div>
+<% end %>
+<%= edit_form(@instance) %>

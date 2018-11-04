@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>XbavSampleApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <%= yield %>
+        </div>
+        <div class="col-lg-3">
+          <div class="well sidebar-nav">
+	    <% if current_user.present? %>
+	    <div>
+	      <%= link_to 'signout', signout_path %>
+	      <%= current_user %>
+	    </div>
+	    <% end %>
+	    <ul>
+	      <li><%= link_to 'Companies', companies_path %></li>
+	      <li><%= link_to 'Employees', employees_path %></li>
+	      <li><%= link_to 'Clients', clients_path %></li>
+	      <li><%= link_to 'Partner Companies', partner_companies_path %></li>
+	      <li><%= link_to 'Contractors', contractors_path %></li>
+	    </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <footer>
+      </footer>
+
+    </div> <!-- /container -->
+  </body>
+</html>

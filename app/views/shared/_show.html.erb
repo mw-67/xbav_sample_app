@@ -1,0 +1,13 @@
+<h2><%= heading(presenter) %></h2>
+<% if flash[:alert] %>
+  <div class="errors">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
+<p>
+  <%= edit_link(@instance) %> &nbsp;
+  <%= delete_link(@instance) %>
+</p>
+<table>
+<%= instance_table(@instance) %>
+</table>

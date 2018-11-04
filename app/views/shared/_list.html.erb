@@ -1,0 +1,14 @@
+<h2><%= heading(presenter, plural: true) %></h2>
+<p>
+  <%= new_link(presenter) %>
+</p>
+<table>
+<tr>
+  <%= header_row(presenter) %>
+</tr>
+<% @collection.each do |entry| %>
+<tr>
+<%= model_row(entry) %>
+</tr>
+<% end %>
+</table>
