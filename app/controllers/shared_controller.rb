@@ -59,10 +59,10 @@ class SharedController < ApplicationController
   end
 
   def show_path
-    send(model_klass.name.downcase + '_path', id: @instance.id)
+    send(model_klass.name.underscore + '_path', id: @instance.id)
   end
 
   def list_path
-    send(model_klass.name.downcase.pluralize + '_path')
+    send(model_klass.name.underscore.pluralize + '_path')
   end
 end
