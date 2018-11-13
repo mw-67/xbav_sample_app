@@ -14,3 +14,12 @@ Data can be filled with random data using the `db:populate` rake task.
 A `SIZE` parameter defines the number of records per table (default 100).
 Multiple calls add up.
 Data can be removed using `db:clean`.
+
+## Setup (for local development)
+
+ * create a xbav user in the database
+ * user must have rights to create databases or you have to create
+   the databases `xbav_sample_app_development` and `xbav_sample_app_test`
+ * run `rake db:setup` or `rake db:migrate` / `rake db:schema:load` to
+   setup the database; same for test env
+ * run the rails server
