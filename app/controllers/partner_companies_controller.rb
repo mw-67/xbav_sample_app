@@ -5,6 +5,6 @@ class PartnerCompaniesController < SharedController
   private
 
   def permitted_params
-    params[:company].permit(:name)
+    params[:partner_company].permit(:name)
   end
 end
