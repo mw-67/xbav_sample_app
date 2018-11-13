@@ -2,7 +2,7 @@
 
 Sample project written for a job application.
 
-See doc/Case study(6h)_ Identifier(token) generator.pdf for the task description.
+See [doc](doc/Case%20study(6h)_%20Identifier(token)%20generator.pdf) for the task description.
 
 Authentication was implemented using omniauth and github oauth2.
 This requires to provide an application id and secret through the
